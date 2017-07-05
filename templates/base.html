@@ -10,12 +10,12 @@
     <link rel="stylesheet" type="text/css" href="base_css.css">.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
     {% block head_js %}{% endblock %}
 </head>
-<body>
+<body style="background-image: url('{% static "media/images/train2.gif" %}')">
 <div class="container">
    <div class="masthead">
        <ul class="nav nav-pills pull-right">
@@ -30,7 +30,7 @@
             {% endif %}
             <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
         </ul>
-       <h1><span class="fui-settings-16 muted">The Trading Hub</span></h1>
+       <h1><span class="fui-settings-16 muted">The Train Hub</span></h1>
    </div>
    <hr>
     {% if messages %}

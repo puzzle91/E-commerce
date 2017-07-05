@@ -1,5 +1,13 @@
+
+/*html {
+    background: center center fixed;
+    background-size: cover;
+}*/
+
 body {
-    
+    background-repeat: no-repeat;
+    background-size:cover
+
 }
 
 .title_index {
@@ -18,3 +26,28 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
+.fa  {
+    color: black;
+    text:black;
+
+}
+
+h1 {
+    color: black;
+}
+
+p {
+    color: black
+}
+
+nav {
+-moz-text-decoration-color: black;
+}
+
+text {
+    color: black;
+}
+
+a {
+    color:black;
+}
