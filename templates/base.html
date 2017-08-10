@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Trading Hub</title>
+    <title>Snowboard Extreme</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -15,10 +15,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
     {% block head_js %}{% endblock %}
 </head>
-<!--<body style="background-image: url('{% static "media/images/train2.gif" %}')">-->
+<body style="background-image: url('{% static "" %}')">
 <div class="container">
-   <div class="masthead">
+   <div class="masthead" >
        <ul class="nav nav-pills pull-right">
+           
             <li><a href="{% url 'index' %}"><i class="fa fa-home"></i> Home</a></li>
             <li><a href="{% url 'categories' %}"><i class="fa fa-cube"></i> Products</a></li>
             {% if user.is_authenticated %}
@@ -30,8 +31,10 @@
             {% endif %}
             <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
         </ul>
-       <h1><span class="fui-settings-16 muted">The Train Hub</span></h1>
    </div>
+    <div class="logo">
+						<a href="{% url 'index' %}"><img src="../../static/media/images/logo.png" alt=""/></a>
+					 </div>
    <hr>
     {% if messages %}
         <div class="alert alert-success">
