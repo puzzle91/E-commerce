@@ -8,6 +8,11 @@ html, body{
 	background:#fff;
 	font-size: 100%;
 }
+
+body {
+	margin-top:-17px;
+}
+
 body a{
  	transition: 0.5s all;
 	-webkit-transition: 0.5s all;

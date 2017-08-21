@@ -9,17 +9,23 @@
     <meta name="author" content="">
     <link rel="stylesheet" type="text/css" href="base_css.css">.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">
+     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" rel="stylesheet" media="screen">
+     <link rel="stylesheet" href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
     {% block head_js %}{% endblock %}
 </head>
 <body style="background-image: url('{% static "" %}')">
+    
+ <div class="header">   
 <div class="container">
-   <div class="masthead" >
+    <div class="row">
+        <div class="col-md-12">
+   <div class="header-left" >
        <ul class="nav nav-pills pull-right">
-           
+
+           <div class="menu">
             <li><a href="{% url 'index' %}"><i class="fa fa-home"></i> Home</a></li>
             <li><a href="{% url 'categories' %}"><i class="fa fa-cube"></i> Products</a></li>
             {% if user.is_authenticated %}
@@ -31,10 +37,18 @@
             {% endif %}
             <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
         </ul>
-   </div>
+        
+
     <div class="logo">
-						<a href="{% url 'index' %}"><img src="../../static/media/images/logo.png" alt=""/></a>
-					 </div>
+
+                        <a href="{% url 'index' %}"><img src="../../static/media/images/logo.png" alt=""/></a>
+                        </div>
+    </div>
+                    </div>
+                    </div>
+                    </div>
+                 </div> 
+            
    <hr>
     {% if messages %}
         <div class="alert alert-success">
@@ -65,6 +79,75 @@
 
    <hr>
    <div class="footer">
+       	<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Products</h4>
+							<li><a href="#">Mens</a></li>
+							<li><a href="#">Womens</a></li>
+							<li><a href="#">Youth</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>About</h4>
+							<li><a href="#">Careers and internships</a></li>
+							<li><a href="#">Sponserships</a></li>
+							<li><a href="#">team</a></li>
+							<li><a href="#">Catalog Request/Download</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Customer Support</h4>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">Shipping and Order Tracking</a></li>
+							<li><a href="#">Easy Returns</a></li>
+							<li><a href="#">Warranty</a></li>
+							<li><a href="#">Replacement Binding Parts</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Newsletter</h4>
+							<div class="footer_search">
+				    		   <form>
+				    			<input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+				    			<input type="submit" value="Go">
+				    		   </form>
+					        </div>
+							<ul class="social">	
+							  <li class="facebook"><a href="#"><span> </span></a></li>
+							  <li class="twitter"><a href="#"><span> </span></a></li>
+							  <li class="instagram"><a href="#"><span> </span></a></li>	
+							  <li class="pinterest"><a href="#"><span> </span></a></li>	
+							  <li class="youtube"><a href="#"><span> </span></a></li>										  				
+						    </ul>
+		   					
+						</ul>
+					</div>
+				</div>
+				<div class="row footer_bottom">
+				    <div class="copy">
+			           <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+		            </div>
+					  <dl id="sample" class="dropdown">
+				        <dt><a href="#"><span>Change Region</span></a></dt>
+				        <dd>
+                            <ul>
+				                <li><a href="#">Australia<img class="flag" src="static/media/images/as.png" alt="" /><span class="value">AS</span></a></li>
+				                <li><a href="#">Sri Lanka<img class="flag" src="static/media/images/srl.png" alt="" /><span class="value">SL</span></a></li>
+				                <li><a href="#">Newziland<img class="flag" src="static/media/images/nz.png" alt="" /><span class="value">NZ</span></a></li>
+				                <li><a href="#">Pakistan<img class="flag" src="static/media/images/pk.png" alt="" /><span class="value">Pk</span></a></li>
+				                <li><a href="#">United Kingdom<img class="flag" src="static/media/images/uk.png" alt="" /><span class="value">UK</span></a></li>
+				                <li><a href="#">United States<img class="flag" src="static/media/images/us.png" alt="" /><span class="value">US</span></a></li>
+				            </ul>
+				         </dd>
+	   				  </dl>
+   				</div>
+			</div>
+		</div>
    </div>
 </div>
 </body>

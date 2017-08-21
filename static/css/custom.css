@@ -40,22 +40,35 @@ p {
     color: black
 }
 
-nav {
--moz-text-decoration-color: black;
-}
+  
 
-text {
-    color: black;
-}
-
-a {
+    a {
     color:black;
 }*/
 
-h1 {
+/* h1 {
     color: black;
+} */
+/* a {
+    color:black;
+} */
+
+/* .header-left {
+    -webkit-text-fill-color: white;
+    color:white;
+    float:left;
+} */
+
+/* body {
+    margin-top: -20px;
+} */
+
+a{
+    color:black
 }
-a {
+td {
     color:black;
 }
-
+th {
+    color:black
+}
