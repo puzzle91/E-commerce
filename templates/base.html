@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
      <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}"> 
     <link rel="stylesheet" href="{% static 'css/style.css' %}" rel="stylesheet" media="screen">
-     <link rel="stylesheet" href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen"> 
+      <link rel="stylesheet" href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
     {% block head_js %}{% endblock %}
@@ -75,7 +75,49 @@
                 {% endblock content%}
             </div>
         </div>
-    </div>
+	</div>
+	 <div class="header_right">
+<!-- start search-->
+				      <div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+
+	<!----search-scripts---->
+						<script type= "text/javascript" src="{% static 'js/classie.js' %}"></script>
+						<script type="text/javascript" src="{% static 'js/uisearch.js' %}"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+						<!----//search-scripts---->
+				    <ul class="icon1 sub-icon1 profile_img">
+					 <li><a class="active-icon c1" href="{% url 'cart' %}"> </a>
+						<ul class="sub-icon1 list">
+						  <div class="product_control_buttons">
+		
+						  </div>
+						   <div class="clear"></div>
+					
+							 <div class="check_button"><img src='static/media/images/img-sprite.png' href="{% url 'cart' %}"/>Check out</a></div>
+		
+							 <div class="clear"></div>
+						  </div>
+						  <div class="clear"></div>
+						</ul>
+					 </li>
+				   </ul>
+		           <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	</div>
+	</div>
 
    <hr>
    <div class="footer">
@@ -84,9 +126,11 @@
 					<div class="col-md-3">
 						<ul class="footer_box">
 							<h4>Products</h4>
-							<li><a href="#">Mens</a></li>
-							<li><a href="#">Womens</a></li>
-							<li><a href="#">Youth</a></li>
+							<li><a href="/categories/4">Mens</a></li>
+							<li><a href="/catgories/9">Womens</a></li>
+							<li><a href="/categories/5">Youth</a></li>
+							<li><a href="/categories/3">Snowboards</a></li>
+							<li><a href="/categories/10">View All</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3">

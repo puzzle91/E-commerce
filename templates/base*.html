@@ -116,26 +116,22 @@
 						</div>
 
 	<!----search-scripts---->
-						<script src="static/js/classie.js"></script>
-						<script src="static/js/uisearch.js"></script>
+						<script type= "text/javascript" src="{% static 'js/classie.js' %}"></script>
+						<script type="text/javascript" src="{% static 'js/uisearch.js' %}"></script>
 						<script>
 							new UISearch( document.getElementById( 'sb-search' ) );
 						</script>
 						<!----//search-scripts---->
 				    <ul class="icon1 sub-icon1 profile_img">
-					 <li><a class="active-icon c1" href="#"> </a>
+					 <li><a class="active-icon c1" href="{% url 'cart' %}"> </a>
 						<ul class="sub-icon1 list">
 						  <div class="product_control_buttons">
-						  	<a href="#"><img src="static/media/images/edit.png" alt=""/></a>
-						  		<a href="#"><img src="static/media/images/close_edit.png" alt=""/></a>
+		
 						  </div>
 						   <div class="clear"></div>
-						  <li class="list_img"><img src="static/media/images/1.jpg" alt=""/></li>
-						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
-                          $12.00</span></li>
-						  <div class="login_buttons">
+					
 							 <div class="check_button"><a href="{% url 'cart' %}">Check out</a></div>
-							 <div class="login_button"><a href="{% url 'login' %}">Login</a></div>
+		
 							 <div class="clear"></div>
 						  </div>
 						  <div class="clear"></div>
@@ -149,7 +145,7 @@
 	    </div>
 	</div>
 	</div>
-	{% comment %} <div class="banner">
+	 {% comment %} <div class="banner"> 
 	<!-- start slider -->
        <div id="fwslider">
          <div class="slider_container">
@@ -189,17 +185,17 @@
       </div>
 	  <div class="main">
 		<div class="content-top">
-			<h2>snowboards</h2>
-			<p>hendrerit in vulputate velit esse molestie consequat, vel illum dolore</p>
+			<h2>Snowboards & Accessories</h2>
+			<p>Find the right gear for your next adventure</p>
 				<ul id="flexiselDemo3">
-				<li><img src="static/media/images/board1.jpg" /></li>
-				<li><img src="static/media/images/board2.jpg" /></li>
-				<li><img src="static/media/images/board3.jpg" /></li>
+				<li><img src="static/media/images/jackettest.jpg" /></li>
 				<li><img src="static/media/images/board4.jpg" /></li>
-				<li><img src="static/media/images/board5.jpg" /></li>
+				<li><img src="static/media/images/jacket22.png" /></li>
+				<li><img src="static/media/images/womanjacket.jpg" /></li>
+				<li><img src="static/media/images/board3.jpg" /></li>
 				
 			</ul>
-		<h3>SnowBoard Extreme Series</h3>
+		<h3>The Mountains Extreme Series</h3>
 						<script type="text/javascript">
 		$(window).load(function() {
 			$("#flexiselDemo3").flexisel({
@@ -229,7 +225,10 @@
 		</script>
 		<script type="text/javascript" src="static/js/jquery.flexisel.js"></script>
 		</div>
-	</div>					
+	
+	</div>		
+	
+	
 
 
     <div class="row">
@@ -361,9 +360,11 @@
 					<div class="col-md-3">
 						<ul class="footer_box">
 							<h4>Products</h4>
-							<li><a href="#">Mens</a></li>
-							<li><a href="#">Womens</a></li>
-							<li><a href="#">Youth</a></li>
+							<li><a href="/categories/4">Mens</a></li>
+							<li><a href="/catgories/9">Womens</a></li>
+							<li><a href="/categories/5">Youth</a></li>
+							<li><a href="/categories/3">Snowboards</a></li>
+							<li><a href="/categories/10">View All</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3">
