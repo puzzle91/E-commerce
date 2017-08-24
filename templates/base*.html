@@ -107,7 +107,8 @@
 <!-- start search-->
 				      <div class="search-box">
 							<div id="sb-search" class="sb-search">
-								<form>
+								<form method="GET" action="{% url 'search' %}">
+									<input product='q' type='text'/>
 									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
 									<input class="sb-search-submit" type="submit" value="">
 									<span class="sb-icon-search"> </span>
@@ -123,7 +124,7 @@
 						</script>
 						<!----//search-scripts---->
 				    <ul class="icon1 sub-icon1 profile_img">
-					 <li><a class="active-icon c1" href="{% url 'cart' %}"> </a>
+					 <li><a class="active-icon c1" href="{% url 'search' %}"> </a>
 						<ul class="sub-icon1 list">
 						  <div class="product_control_buttons">
 		

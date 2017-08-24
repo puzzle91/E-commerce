@@ -25,7 +25,8 @@ from payments import urls as payments_urls
 from .settings import MEDIA_ROOT
 from django.views import static
 from categories import urls as categories_urls
-from home.views import get_index, do_search, delete_contact
+from home.views import get_index, do_search
+from search.views import product_search
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -38,7 +39,6 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
     url(r'^categories/', include(categories_urls)),
     url(r'^search/', do_search, name='search'),    
-    url(r'^(?P<id>\d+)/delete', delete_contact, name='delete'),
     url(r'^$', get_index, name='index'),
-    
+    url(r'before/', product_search, name='searchprod'),
 ]
